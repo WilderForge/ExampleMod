@@ -1,0 +1,47 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'eclipse'
+}
+
+version = modVersion //To change the version of your mod, edit modVersion in gradle.properties
+group = "com.wildermods"
+archivesBaseName = "examplemod"
+
+apply plugin: 'com.wildermods.workspace'
+apply from: 'replaceTokenScript.gradle' //see replaceTokenScript.gradle!
+apply from: 'publishScript.gradle' //If you're not going to publish to a maven repository, you can delete this line and delete publishScript.gradle.
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://maven.wildermods.com/" //The Wilderforge API is located in a custom maven repository
+    }
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+dependencies {
+	
+	/*
+	 * Add any dependencies you need here. In this example mod, we depend on wilderforge
+	 * 
+	 * To add libraries or to change the versions used, you need to modify /gradle/libs.versions.toml
+	 */
+	
+	implementation libs.wilderforge
+	
+	/**********
+	Don't alter the dependencies below.
+	
+	It allows the buildscript to recognize the base game.
+	***********/
+	
+	//Wildermyth, Scratchpad
+	compileOnly fileTree(dir: './bin/', include: ['*.jar'])
+	
+	//All dependencies of Wildermyth itself
+	compileOnly fileTree(dir: './bin/lib/', include: ['*.jar'])
+}
