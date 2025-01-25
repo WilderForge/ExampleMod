@@ -20,12 +20,16 @@ import com.wildermods.examplemod.config.ExampleModSettings;
 import com.wildermods.examplemod.mixin.MainScreenAccessor;
 
 /**
- * This example mod does three things:
- * 
- * 1.
+ * <p>This example mod does four things:
+ * <p>
+ * <p>1. Adds a red and yellow die to the left corner of the main menu (see RootMenuMixin)
+ * <p>2. Changes the size of the characters shown in the main menu (see BackgroundInfoMixin)
+ * <p>3. Adds a configuration which toggles whether the die is shown,
+ * 		allows you to customize the eize of the characters in the main menu (see {@link ExampleModConfig})
+ * <p>4. Reloads the main menu if the mod configuration is changed while it is open. (see {@link #onConfigChanged(ConfigSavedEvent)} and LegacyUIRootMixin)
  */
 @Mod(modid = MOD_ID, version = MOD_VERSION)
-public class ExampleMod extends Throwable {
+public class ExampleMod {
 	
 	public static final String MOD_ID = "examplemod"; //If you change this value, be sure to also change it in src/main/resources/fabric.mod.json
 	public static final String MOD_VERSION = "@modVersion@"; //the mod version is applied to the code at compile time. You can change the version of your mod by editing gradle.properties in the project's root directory
@@ -54,9 +58,9 @@ public class ExampleMod extends Throwable {
 		//We want the main screen to update if the config for our example mod changes
 		
 		if(e.getCoremod().equals(coremodInfo)) { //if the config that is being changed is for this mod
-			MainScreenAccessor screen = Cast.from(mainApp.getMainScreen());
-			if(screen.getContent() instanceof RootMenuScreen) { //if the current screen is the main menu, then we want to reload the main menu.
-				Cast.as(screen, Reloadable.class).reload(); //See LegacyUIRootMixin for implementation. RootMenuScreen is a LegacyUIRoot
+			MainScreenAccessor screen = Cast.from(mainApp.getMainScreen()); //get the main screen
+			if(screen.getContent() instanceof RootMenuScreen) { //if the current content in the screen is the main menu, then we want to reload the main menu.
+				Cast.as(screen, Reloadable.class).reload(); //Reload the screen. See LegacyUIRootMixin for implementation. RootMenuScreen is a LegacyUIRoot
 			}
 		}
 	}
