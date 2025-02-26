@@ -1,6 +1,5 @@
 package com.wildermods.examplemod;
 
-import com.wildermods.wilderforge.api.eventV1.bus.SubscribeEvent;
 import com.wildermods.wilderforge.api.mixins.v1.Cast;
 import com.wildermods.wilderforge.api.modLoadingV1.CoremodInfo;
 import com.wildermods.wilderforge.api.modLoadingV1.MissingCoremod;
@@ -11,6 +10,8 @@ import com.wildermods.wilderforge.launch.coremods.Coremods;
 import com.wildermods.wilderforge.launch.logging.Logger;
 import com.wildermods.wilderforge.mixins.LegacyDesktopAccessor;
 import com.worldwalkergames.legacy.ui.menu.RootMenuScreen;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import static com.wildermods.examplemod.ExampleMod.MOD_ID;
 import static com.wildermods.examplemod.ExampleMod.MOD_VERSION;
