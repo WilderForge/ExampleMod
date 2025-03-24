@@ -30,7 +30,7 @@ logs/*
 crashes/*
 
 #Mixin
-.mixin/*
+.mixin.out/*
 
 #WilderWorkspace
 libs/
