@@ -29,6 +29,9 @@ logs/*
 #WilderForge
 crashes/*
 
+#Mixin
+.mixin.out/*
+
 #WilderWorkspace
 libs/
 providerSettings.json
