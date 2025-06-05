@@ -7,7 +7,6 @@ import com.wildermods.wilderforge.api.modLoadingV1.Mod;
 import com.wildermods.wilderforge.api.modLoadingV1.config.ConfigSavedEvent;
 import com.wildermods.wilderforge.api.modLoadingV1.event.PreInitializationEvent;
 import com.wildermods.wilderforge.launch.coremods.Coremods;
-import com.wildermods.wilderforge.launch.logging.Logger;
 import com.wildermods.wilderforge.mixins.LegacyDesktopAccessor;
 import com.worldwalkergames.legacy.ui.menu.RootMenuScreen;
 
@@ -19,6 +18,7 @@ import static com.wildermods.examplemod.ExampleMod.MOD_VERSION;
 import com.wildermods.examplemod.config.ExampleModConfig;
 import com.wildermods.examplemod.config.ExampleModSettings;
 import com.wildermods.examplemod.mixin.MainScreenAccessor;
+import com.wildermods.provider.util.logging.Logger;
 
 /**
  * <p>This example mod does four things:
