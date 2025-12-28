@@ -64,6 +64,9 @@ jobs:
 
       - name: Clear Game Files
         run: ./gradlew clearLocalRuntime
+      
+      - name: Add SteamCMD to PATH
+        run: echo "/usr/games" >> $GITHUB_PATH
 
       - name: Debug PATH
         run: echo $PATH
