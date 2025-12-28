@@ -27,7 +27,7 @@ java {
 }
 
 wilderWorkspace {
-	useDependency("1.16+559")
+	useDependency("1.16+560-unstable")
 }
 
 dependencies {
