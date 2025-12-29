@@ -1,6 +1,6 @@
 [versions]
 wilderforge_version = "0.6.0.0"
-workspace_version = "6.5.1.0"
+workspace_version = "6.5.2.0"
 
 #Define the library by defining its module and version reference.
 [libraries]
