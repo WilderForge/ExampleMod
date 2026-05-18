@@ -32,7 +32,13 @@ __Note:__ This project uses WilderWorkspace to configure itself for IDEs. Curren
     cd ./examplemod
     ```
     ***
-3. Setup the project workspace:
+3. Prepare the project:
+
+    ```shell
+    ./gradlew prepare
+    ```
+   
+4. Setup the project workspace:
 
     ```shell
     ./gradlew setupDecompWorkspace
@@ -52,7 +58,7 @@ __Note:__ This project uses WilderWorkspace to configure itself for IDEs. Curren
 
     ***
 
-4. Change your mod's metadata:
+5. Change your mod's metadata:
 
     You probably don't want your mod to be called 'examplemod'. To properly convey the name of your mod within the game, change the following values:
 
@@ -88,7 +94,7 @@ __Note:__ This project uses WilderWorkspace to configure itself for IDEs. Curren
       * Before publishing your mod, be sure to move the code out of the `com.wildermods` namespace. By convention, your packages should start with the `group` defined in `build.gradle`, followed by the value in `archivesBaseName`.
     ***
 
-5. Configure the project for your IDE:
+6. Configure the project for your IDE:
 
     Configure the project for your IDE.
     __Note:__ This project uses WilderWorkspace to configure itself for IDEs. Currently, WilderWorkspace only supports the Eclipse IDE. Pull Requests to add support for additional IDEs are welcome, and can be submitted at the [WilderWorkspace repository](https://wildermods.com/wilderworkspace)
