@@ -8,6 +8,8 @@ version = modVersion //To change the version of your mod, edit modVersion in gra
 group = "com.wildermods"
 base.archivesName = "examplemod"
 
+ext.gameVersion = "1.16+562"
+
 apply plugin: 'com.wildermods.workspace'
 apply from: 'replaceTokenScript.gradle' //see replaceTokenScript.gradle!
 apply from: 'publishScript.gradle' //If you're not going to publish to a maven repository, you can delete this line and delete publishScript.gradle.
@@ -22,12 +24,8 @@ repositories {
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(25)
 	}
-}
-
-wilderWorkspace {
-	useDependency("1.16+560-unstable")
 }
 
 dependencies {
