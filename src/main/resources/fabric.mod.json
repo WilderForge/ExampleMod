@@ -20,14 +20,14 @@
 	],
 	"depends":{
 		"wildermyth": ">=1.16.0",
-		"wilderforge": ">=0.4.0.0"
+		"wilderforge": ">=0.8.0.1"
 	},
 	"breaks":{
 		"wildermyth": [
 			"<1.16.0"
 		],
 		"wilderforge": [
-			"<0.4.0.0"
+			"<0.8.0.1"
 		],
 		"minecraft":["*"]
 	},
