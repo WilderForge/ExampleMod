@@ -70,9 +70,9 @@ jobs:
 
       - name: Debug PATH
         run: echo $PATH
-		
-	  - name: Clear Game Files
-	    run: ./gradlew prepare
+
+      - name: Clear Game Files
+        run: ./gradlew prepare
 
       - name: Setup Decompiled Workspace
         run: ./gradlew setupDecompWorkspace
